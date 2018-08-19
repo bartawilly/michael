@@ -1,0 +1,179 @@
+body {
+    font-family: Lato, sans-serif;
+}
+
+ul.draw-result {
+    margin: 0;
+    padding: 7.5px
+}
+
+html.no-svg ul.draw-result li,
+ul.draw-result li {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+    padding: 0;
+    margin: 7.5px 1.5px 7.5px 0;
+    text-align: center;
+    color: #404040;
+    font-weight: 700;
+    line-height: 45px
+}
+
+ul.draw-result li {
+    background: url(https://static.lotteryusa.com/images/balls.png) no-repeat;
+    background-size: 135px 45px
+}
+
+html.no-svg ul.draw-result li {
+    background: url(https://static.lotteryusa.com/images/balls-40x40.png) no-repeat
+}
+
+ul.draw-result li.bonus {
+    background-position: -90px 0;
+    color: #fff;
+    position: relative;
+    height: 60px
+}
+
+table.game-results tbody tr td.result ul.draw-result li.extra,
+table.state-results ul.draw-result li.extra,
+ul.draw-result li.extra {
+    background: 0 0;
+    height: auto;
+    width: auto;
+    display: block
+}
+
+table.game-results tbody tr td.result ul.draw-result li.extra,
+table.game-results ul.draw-result li.extra,
+table.state-results ul.draw-result li.extra {
+    font-size: 14px;
+    line-height: 14px;
+    margin: 0
+}
+
+ul.draw-result li.bonus span {
+    font-size: 12px;
+    line-height: 12px;
+    position: absolute;
+    color: #404040;
+    left: 0;
+    right: 0;
+    top: 29px;
+    margin-left: auto;
+    margin-right: auto
+}
+
+ul.draw-result li.bonus.mega-ball {
+    background-position: -45px 0;
+    color: #404040
+}
+
+ul.draw-result li.bonus.powerball {
+    background-position: -90px 0;
+    color: #fff
+}
+
+ul.draw-result li.powerball span {
+    color: #404040
+}
+
+ul.draw-result li.bonus span {
+    font-size: 12px;
+    line-height: 12px;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto
+}
+
+ul.draw-result li.extra {
+    text-transform: uppercase;
+    background: 0 0;
+    text-align: left;
+    font-size: 14px;
+    margin: 0;
+    line-height: 14px;
+    width: auto;
+    height: 14px;
+    font-weight: 500
+}
+
+.list-inline,
+.list-unstyled {
+    padding-left: 0;
+    list-style: none
+}
+
+.next-jackpot {
+    border-left: 1px solid rgba(255, 255, 255, .1);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.next-jackpot ul {
+    list-style: none;
+    padding: 0
+}
+
+.next-jackpot ul li {
+    text-transform: uppercase;
+    font-weight: 200
+}
+
+.next-jackpot ul li span.date {
+    font-weight: 700
+}
+
+.next-jackpot ul li.jackpot-amount {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.label-rollover {
+    display: inline;
+    font-size: 75%;
+    border-radius: .25em;
+    border: 1px solid #43a047;
+    background: 0 0;
+    color: #43a047;
+    text-transform: uppercase;
+}
+
+.day-label,
+.label-rollover {
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+}
+
+.label,
+.label-rollover {
+    padding: .2em .6em .3em;
+}
+
+.btn-tickets:active,
+.btn-tickets:focus,
+.btn-tickets:hover {
+    background: #cd3328;
+    color: #fff;
+}
+
+.btn-tickets {
+    background: #d84136;
+    color: #fff;
+    line-height: 1;
+    padding: 3px 10px;
+    text-transform: uppercase;
+    border-radius: .25em;
+    border: 1px solid transparent;
+    vertical-align: middle;
+    font-weight: 400;
+    font-size: 11px;
+    text-align: center;
+}
