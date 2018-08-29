@@ -9,63 +9,40 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="styleF.css">
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $.ajax({
-                type: "GET",
-                url: "https://www.thelotter.com/rss.xml?languageId=5",
-                dataType: "xml",
-                success: xmlParser
-            })
-        });
-
-        function xmlParser(xml) {
-            $(xml).find("entry").each(function() {
-                $("#lotteryContainer").append('<div class="row"> <div class="col-md-12"> <h4> Datum der Ziehung <span class="date">' +
-                    $(this).find("last_draw_date").text() + '</span> </h4> </div> </div>' +
-                    '<div class="row"> <div class="col-md-6"> <ul class="draw-result list-unstyled list-inline">' + ballsCreate($(this).find("last_draw_results").text()) + '</ul> </div>' +
-                    '<div class="col-md-6 next-jackpot"> <ul> <li>Jackpot der nächsten Ziehung <span class="date">' + $(this).find("next_draw_date").text() + ' </span> <ul> <li class="jackpot-amount">' +
-                    $(this).find("next_draw_jackpot").text() + '</li> </ul> </li> </ul> </div> </div>')
-            });
-        }
-
-        function ballsCreate(text) {
-            if (text.indexOf('+') > -1) {
-                text = text.replace(/\s/g, '');
-                var lastRedBall = text.split("+")[1];
-                var nums = text.split("+")[0].split(";");
-                var textDesigned = '';
-                for (i = 0; i < nums.length; i++) {
-                    textDesigned = textDesigned + '<li>' + nums[i] + '</li>';
-                }
-                if (lastRedBall.indexOf(';') > -1) {
-                    var redNums = lastRedBall.split(";");
-                    var redTextDesigned = '';
-                    for (i = 0; i < redNums.length; i++) {
-                        redTextDesigned = redTextDesigned + '<li class="bonus powerball">' + redNums[i] + '<span>PB</span></li>';
-                    }
-                    return textDesigned + redTextDesigned;
-                }
-                return textDesigned + '<li class="bonus powerball">' + lastRedBall + '<span>PB</span></li>';
-
-            } else {
-                var nums = text.split(";");
-                var textDesigned = '';
-                for (i = 0; i < nums.length; i++) {
-                    textDesigned = textDesigned + '<li>' + nums[i] + '</li>';
-                }
-                return textDesigned;
-            }
-        }
-    </script>
 
 </head>
 
 <body>
 
-    <div class="container-fluid" id="lotteryContainer">
+    <div class="container-fluid">
 
+        <div class="row">
+            <div class="col-md-12">
+                <h4>Results for <span class="date">Sat, Jul 28, 2018</span></h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <ul class="draw-result list-unstyled list-inline">
+                    <li>22</li>
+                    <li>27</li>
+                    <li>46</li>
+                    <li>56</li>
+                    <li>65</li>
+                    <li class="bonus powerball">13 <span>PB</span></li>
 
+                </ul>
+            </div>
+            <div class="col-md-6 next-jackpot">
+                <ul>
+                    <li>Next Jackpot on <span class="date">Wed, Aug 01, 2018</span>
+                        <ul>
+                            <li class="jackpot-amount">$187,000,000 </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 
 
