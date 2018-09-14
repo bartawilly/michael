@@ -22,10 +22,10 @@
         function xmlParser(xml) {
             $(xml).find("entry").each(function() {
                 if ($(this).find("next_draw_jackpot").text() != "") {
-                    $("#lotteryContainer").append('<div class="row"><div class="col-md-6 next-jackpot"><ul><li> Datum der Ziehung <span class="date">' +
+                    $("#lotteryContainer").append('<div class="row"><div class="col-md-12 next-jackpot"><ul><li> Datum der Ziehung <span class="date">' +
                         $(this).find("last_draw_date").text() + '</span></li></ul><ul class="draw-result list-unstyled list-inline">' +
-                        ballsCreate($(this).find("last_draw_results").text()) + '</ul></div>' +
-                        '<div class="col-md-6 next-jackpot"><ul><li> <span class="date">' + $(this).find("next_draw_date").text() + '</span><ul><li class="jackpot-amount">' +
+                        ballsCreate($(this).find("last_draw_results").text()) + '</ul></div></div>' +
+                        '<div class="row"><div class="col-md-6 next-jackpot"><ul><li> <span class="date">' + $(this).find("next_draw_date").text() + '</span><ul><li class="jackpot-amount">' +
                         $(this).find("next_draw_jackpot").text() + '</li></ul></li></ul></div></div>')
                 } else {
                     $("#lotteryContainer").append('<div class="row"><div class="col-md-12 next-jackpot"><ul><li> Datum der Ziehung <span class="date">' +
