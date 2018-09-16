@@ -21,7 +21,7 @@ ul.draw-result li {
 }
 
 ul.draw-result li {
-    background: url(https://static.lotteryusa.com/images/balls.png) no-repeat;
+    background: url(https://static.lotteryusa.com/images/balls-40x40.png) no-repeat;
     background-size: 135px 45px
 }
 
@@ -179,4 +179,91 @@ ul.draw-result li.extra {
     font-weight: 400;
     font-size: 11px;
     text-align: center;
+}
+
+@media all and (min-width: 960px) {
+    .next-jackpot ul li {
+        text-transform: uppercase;
+        font-size: 15px;
+        font-weight: 170
+    }
+    .next-jackpot ul li span.date {
+        font-weight: 670
+    }
+    .next-jackpot ul li.jackpot-amount {
+        font-size: 19px;
+        font-weight: 570;
+        margin-top: 4%;
+        margin-left: 1%;
+    }
+    html.no-svg ul.draw-result li,
+    ul.draw-result li {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+        padding: 0;
+        margin: 7.5px 1.5px 7.5px 0;
+        text-align: center;
+        color: #404040;
+        font-weight: 700;
+        line-height: 45px
+    }
+}
+
+@media all and (max-width: 959px) and (min-width: 600px) {
+    .next-jackpot ul li {
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 160
+    }
+    .next-jackpot ul li span.date {
+        font-weight: 650
+    }
+    .next-jackpot ul li.jackpot-amount {
+        font-size: 17px;
+        font-weight: 550;
+        margin-top: 4%;
+        margin-left: 1%;
+    }
+    html.no-svg ul.draw-result li,
+    ul.draw-result li {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+        padding: 0;
+        margin: 7.5px 1.5px 7.5px 0;
+        text-align: center;
+        color: #404040;
+        font-weight: 650;
+        line-height: 45px
+    }
+}
+
+@media all and (max-width: 599px) and (min-width: 320px) {
+    .next-jackpot ul li {
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 160
+    }
+    .next-jackpot ul li span.date {
+        font-weight: 650
+    }
+    .next-jackpot ul li.jackpot-amount {
+        font-size: 17px;
+        font-weight: 550;
+        margin-top: 4%;
+        margin-left: 1%;
+    }
+    html.no-svg ul.draw-result li,
+    ul.draw-result li {
+        width: 45px;
+        height: 45px;
+        font-size: 17px;
+        padding: 0;
+        margin: 7.5px 1.5px 7.5px 0;
+        text-align: center;
+        color: #404040;
+        font-weight: 600;
+        line-height: 45px
+    }
 }
