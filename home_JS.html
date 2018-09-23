@@ -13,7 +13,7 @@
         $(document).ready(function() {
             $.ajax({
                 type: "GET",
-                url: "https://www.thelotter.com/rss.xml?languageId=5",
+                url: "https://www.thelotter.com/rss.xml?languageId=5&lotteryIds=5,149",
                 dataType: "xml",
                 success: xmlParser
             })
@@ -22,14 +22,14 @@
         function xmlParser(xml) {
             $(xml).find("entry").each(function() {
                 if ($(this).find("next_draw_jackpot").text() != "") {
-                    $("#lotteryContainer").append('<div class="row"><div class="col-md-6 next-jackpot"><ul><li> Datum der Ziehung <span class="date">' +
-                        $(this).find("last_draw_date").text() + '</span></li></ul><ul class="draw-result list-unstyled list-inline">' +
+                    $("#lotteryContainer").append('<div class="row"><div class="col-md-6 next-jackpot"><ul class="date"> Datum der Ziehung <span class="date">' +
+                        $(this).find("last_draw_date").text() + '</span></ul><ul class="draw-result list-unstyled list-inline">' +
                         ballsCreate($(this).find("last_draw_results").text()) + '</ul></div>' +
-                        '<div class="col-md-6 next-jackpot"><ul><li>Jackpot der nächsten Ziehung <span class="date">' + $(this).find("next_draw_date").text() + '</span><ul><li class="jackpot-amount">' +
-                        $(this).find("next_draw_jackpot").text() + '</li></ul></li></ul></div></div>')
+                        '<div class="col-md-6 next-jackpot"><ul><li>Jackpot der nächsten Ziehung <span class="date">' + $(this).find("next_draw_date").text() + '</span></li><li class="jackpot-amount">' +
+                        $(this).find("next_draw_jackpot").text() + '</li></ul></div></div>')
                 } else {
-                    $("#lotteryContainer").append('<div class="row"><div class="col-md-12 next-jackpot"><ul><li> Datum der Ziehung <span class="date">' +
-                        $(this).find("last_draw_date").text() + '</span></li></ul><ul class="draw-result list-unstyled list-inline">' +
+                    $("#lotteryContainer").append('<div class="row"><div class="col-md-12 next-jackpot"><ul class="date"> Datum der Ziehung <span class="date">' +
+                        $(this).find("last_draw_date").text() + '</span></ul><ul class="draw-result list-unstyled list-inline">' +
                         ballsCreate($(this).find("last_draw_results").text()) + '</ul></div></div>')
                 }
 

@@ -116,7 +116,18 @@ ul.draw-result li.extra {
 
 .next-jackpot ul {
     list-style: none;
-    padding: 0
+    padding: 0;
+    margin: 0;
+}
+
+.next-jackpot ul.date {
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: 200
+}
+
+.next-jackpot ul.date span.date {
+    font-weight: 700
 }
 
 .next-jackpot ul li {
@@ -132,8 +143,7 @@ ul.draw-result li.extra {
 .next-jackpot ul li.jackpot-amount {
     font-size: 20px;
     font-weight: 600;
-    margin-top: 3%;
-    margin-left: 1%;
+    margin-top: 7%;
 }
 
 .label-rollover {
@@ -193,8 +203,7 @@ ul.draw-result li.extra {
     .next-jackpot ul li.jackpot-amount {
         font-size: 19px;
         font-weight: 570;
-        margin-top: 4%;
-        margin-left: 1%;
+        margin-top: 7%;
     }
     html.no-svg ul.draw-result li,
     ul.draw-result li {
@@ -222,8 +231,7 @@ ul.draw-result li.extra {
     .next-jackpot ul li.jackpot-amount {
         font-size: 17px;
         font-weight: 550;
-        margin-top: 4%;
-        margin-left: 1%;
+        margin-top: 7%;
     }
     html.no-svg ul.draw-result li,
     ul.draw-result li {
@@ -251,8 +259,7 @@ ul.draw-result li.extra {
     .next-jackpot ul li.jackpot-amount {
         font-size: 17px;
         font-weight: 550;
-        margin-top: 4%;
-        margin-left: 1%;
+        margin-top: 7%;
     }
     html.no-svg ul.draw-result li,
     ul.draw-result li {
