@@ -145,7 +145,7 @@ ul.draw-result li.extra {
 }
 
 .next-jackpot ul li.jackpot-amount {
-    font-size: 20px;
+    font-size: 23px;
     font-weight: 600;
     margin-top: 7%;
 }
@@ -205,7 +205,7 @@ ul.draw-result li.extra {
         font-weight: 670
     }
     .next-jackpot ul li.jackpot-amount {
-        font-size: 19px;
+        font-size: 21px;
         font-weight: 570;
         margin-top: 7%;
     }
@@ -233,7 +233,7 @@ ul.draw-result li.extra {
         font-weight: 650
     }
     .next-jackpot ul li.jackpot-amount {
-        font-size: 17px;
+        font-size: 20px;
         font-weight: 550;
         margin-top: 7%;
     }
@@ -261,7 +261,7 @@ ul.draw-result li.extra {
         font-weight: 650
     }
     .next-jackpot ul li.jackpot-amount {
-        font-size: 17px;
+        font-size: 20px;
         font-weight: 550;
         margin-top: 7%;
     }
